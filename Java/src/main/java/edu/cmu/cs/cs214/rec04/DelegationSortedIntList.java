@@ -11,7 +11,7 @@ package edu.cmu.cs.cs214.rec04;
  */
 public class DelegationSortedIntList implements IntegerList {
 
-    private SortedIntList sortedList;
+    private final SortedIntList sortedList;
     private int added;
 
     public DelegationSortedIntList() {

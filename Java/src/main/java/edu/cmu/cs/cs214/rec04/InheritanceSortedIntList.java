@@ -31,12 +31,14 @@ public class InheritanceSortedIntList extends SortedIntList {
 
     @Override
     public boolean addAll(IntegerList List) {
-        // int size = size();
-        boolean amjilt = super.addAll(List);
-        if (amjilt) {
-            totalAdded++;
+        boolean success = true;
+        for (int i = 0; i < List.size(); i++) {
+            boolean added = this.add(List.get(i));
+            if (!added) {
+                success = false;
+            }
         }
-        return amjilt;
+        return success;
     }
 
     public int getTotalAdded() {
