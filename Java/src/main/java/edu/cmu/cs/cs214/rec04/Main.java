@@ -13,11 +13,11 @@ public class Main {
         /**
          * This is a sandbox to experiment in. Uncomment the following code to
          * play with your implementation Select all and (CTRL + /) or (COMMAND +
-         * /) Feel free to write more to test your implementation. 
+         * /) Feel free to write more to test your implementation.
          *
          */
-        IntegerList list1;
-        SortedIntList list2;
+        DelegationSortedIntList list1;
+        InheritanceSortedIntList list2;
 
         list1 = new DelegationSortedIntList();
         list2 = new InheritanceSortedIntList();
