@@ -1,5 +1,6 @@
 package edu.cmu.cs.cs214.rec04;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
@@ -60,6 +61,12 @@ public class DelegationSortedIntListTest {
 
         // check that the total number of elements added is 5.
         assertTrue(list1.getTotalAdded() == 5);
+        list1.remove(3);
+        list1.remove(1);
+        list1.remove(2);
+        // assertTrue(list1.getTotalAdded() == 5);
+        int num = 5;
+        assertEquals(list1.getTotalAdded(), num);
 
         // add 2 elements to a second list.
         list2.add(3);
@@ -72,7 +79,7 @@ public class DelegationSortedIntListTest {
         list2.addAll(list1);
 
         // check that the total number of elements added to our second list is 7.
-        assertTrue(list2.getTotalAdded() == 7);
+        assertTrue(list2.getTotalAdded() == 4);
     }
 
     /**
